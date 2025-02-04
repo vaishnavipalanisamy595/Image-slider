@@ -1,0 +1,56 @@
+/* Carousel Styling */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
